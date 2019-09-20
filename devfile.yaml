@@ -1,13 +1,13 @@
 apiVersion: 1.0.0
 metadata:
-  name: quarkus-che-demo
+  name: quarkusdb
 
 projects:
 
   - source:
       type: git
-      location: 'https://github.com/sunix/che-quarkus-demo'
-    name: che-quarkus-demo
+      location: 'https://github.com/VeerMuchandi/quarkusdb'
+    name: che-quarkusdb
 
 components:
 
