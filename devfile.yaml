@@ -58,25 +58,25 @@ commands:
       - type: exec
         command: pkill java; mvn compile quarkus:dev
         component: quarkus-builder
-        workdir: /projects/che-quarkus-demo/hello-quarkus
+        workdir: /projects/che-quarkusdb
 
   - name: package
     actions:
       - type: exec
         command: mvn package
         component: quarkus-builder
-        workdir: /projects/che-quarkus-demo/hello-quarkus
+        workdir: /projects/che-quarkusdb
 
   - name: package -Pnative
     actions:
       - type: exec
         command: mvn package -Pnative
         component: quarkus-builder
-        workdir: /projects/che-quarkus-demo/hello-quarkus
+        workdir: /projects/che-quarkusdb
 
   - name: start native
     actions:
       - type: exec
         command: ./hello-quarkus-1.0-SNAPSHOT-runner -Dquarkus.http.host=0.0.0.0
         component: quarkus-runner
-        workdir: /projects/che-quarkus-demo/hello-quarkus/target
+        workdir: /projects/che-quarkusdb/target
